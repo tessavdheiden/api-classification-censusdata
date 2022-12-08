@@ -1,5 +1,6 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.linear_model import LogisticRegression
+import numpy as np
 
 
 # Optional: implement hyperparameter tuning.
@@ -61,3 +62,28 @@ def inference(model, X):
     """
     preds = model.predict(X)
     return preds
+
+
+def model_slice_performance(data, X, y, model, category):
+    """ Calculates performance of model for slicing data by category
+
+    Inputs
+    ------
+    data : pd.Dataframe
+    X : np.ndarray
+    y : np.ndarray
+    model : sklearn model
+    category : str
+        Slices data
+    Returns
+    -------
+    result : dict
+        Per value in category the performance metrics
+    """
+    result = {}
+    for val in data[category].unique():
+        mask = (data[category] == val).values
+        preds = inference(model, X[mask])
+        precision, recall, fbeta = compute_model_metrics(y[mask], preds)
+        result[val] = {"precision": precision, "recall": recall, "fbeta": fbeta}
+    return result
