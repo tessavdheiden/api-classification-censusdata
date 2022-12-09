@@ -26,6 +26,26 @@ class Data(BaseModel):
     hours_per_week: int
     native_country: str
 
+    class Config:
+        schema_extra = {
+            "example": {
+                "age": 24,
+                "workclass": "Private",
+                "fnlgt": 176580,
+                "education": "5th-6th",
+                "education-num": 3,
+                "marital-status": "Married-spouse-absent",
+                "occupation": "Farming-fishing",
+                "relationship": "Not-in-family",
+                "race": "White",
+                "sex": "Male",
+                "capital-gain": 0,
+                "capital-loss": 0,
+                "hours-per-week": 40,
+                "native-country": "Mexico",
+            }
+        }
+
 
 @app.get("/")
 async def read_root():
