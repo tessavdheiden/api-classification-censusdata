@@ -38,5 +38,6 @@ X_test, y_test, _, _ = process_data(
 
 # Train and save a model.
 model = train_model(X_train=X_train, y_train=y_train)
-filename = './model/model_params.joblib'
-dump(model, filename)
+dump(model, './model/model.joblib')
+dump(lb, './model/lb.joblib')
+dump(encoder, './model/encoder.joblib')
