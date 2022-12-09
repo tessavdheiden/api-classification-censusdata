@@ -33,25 +33,26 @@ async def read_root():
 
 
 @app.post("/predict/")
-async def predict(data: Data = Body(
-        example={
-            "age": 24,
-            "workclass": "Private",
-            "fnlgt": 176580,
-            "education": "5th-6th",
-            "education-num": 3,
-            "marital-status": "Married-spouse-absent",
-            "occupation": "Farming-fishing",
-            "relationship": "Not-in-family",
-            "race": "White",
-            "sex": "Male",
-            "capital-gain": 0,
-            "capital-loss": 0,
-            "hours-per-week": 40,
-            "native-country": "Mexico",
-        },
-    ),
-):
+async def predict(data: Data
+                  # = Body(
+                  #     example={
+                  #         "age": 24,
+                  #         "workclass": "Private",
+                  #         "fnlgt": 176580,
+                  #         "education": "5th-6th",
+                  #         "education-num": 3,
+                  #         "marital-status": "Married-spouse-absent",
+                  #         "occupation": "Farming-fishing",
+                  #         "relationship": "Not-in-family",
+                  #         "race": "White",
+                  #         "sex": "Male",
+                  #         "capital-gain": 0,
+                  #         "capital-loss": 0,
+                  #         "hours-per-week": 40,
+                  #         "native-country": "Mexico",
+                  #     },
+                  # ),
+                  ):
     cat_features = [
         "workclass",
         "education",
