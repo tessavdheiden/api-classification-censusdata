@@ -51,4 +51,5 @@ def test_train_model(data):
         train, ["categorical_feat"], label="id", training=True
     )
     model = train_model(X_train, y_train)
-    assert type(model) == sklearn.linear_model.LogisticRegression
+    assert type(model) == sklearn.linear_model.LogisticRegression or \
+           type(model) == sklearn.ensemble.RandomForestClassifier

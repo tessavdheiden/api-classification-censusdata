@@ -1,5 +1,6 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 
 
@@ -19,7 +20,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    lr = LogisticRegression(max_iter=1000)
+    lr = RandomForestClassifier()
     lr.fit(X_train, y_train)
     return lr
 
