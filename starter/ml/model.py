@@ -1,6 +1,8 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
 import numpy as np
 
 
@@ -20,7 +22,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    lr = RandomForestClassifier()
+    lr = LogisticRegression()
     lr.fit(X_train, y_train)
     return lr
 

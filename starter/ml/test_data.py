@@ -52,4 +52,6 @@ def test_train_model(data):
     )
     model = train_model(X_train, y_train)
     assert type(model) == sklearn.linear_model.LogisticRegression or \
-           type(model) == sklearn.ensemble.RandomForestClassifier
+           type(model) == sklearn.ensemble.RandomForestClassifier or \
+           type(model) == sklearn.svm.SVC or \
+           type(model) == sklearn.neighbors.KNeighborsClassifier

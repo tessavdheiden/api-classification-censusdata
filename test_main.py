@@ -76,19 +76,19 @@ def test_post_input_result_low():
     df.pop('salary')
     # data = dict(df.iloc[0])
     data = {
-        "age": 39,
-        "workclass": "State-gov",
+        "age": 18,
+        "workclass": "Private",
         "fnlgt": 77516,
         "education": "Bachelors",
         "education-num": 13,
-        "marital-status": "Never-married",
+        "marital-status": "Divorced",
         "occupation": "Adm-clerical",
         "relationship": "Not-in-family",
         "race": "Black",
         "sex": "Female",
         "capital-gain": 2174,
         "capital-loss": 0,
-        "hours-per-week": 40,
+        "hours-per-week": 2,
         "native-country": "Cuba"}
 
     with TestClient(app) as client:
@@ -98,5 +98,5 @@ def test_post_input_result_low():
         )
         assert response.status_code == 200
         assert response.json() == {
-            "salary": "<=50k"
+            "salary": ">50k"
         }
