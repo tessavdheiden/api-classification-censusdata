@@ -1,8 +1,8 @@
 # Put the code for your API here.
 import fastapi
 import joblib
-from fastapi import FastAPI, Body
-from pydantic import BaseModel
+from fastapi import FastAPI
+from pydantic import BaseModel, Field
 from starter.ml.model import inference
 from starter.ml.data import process_data
 import pandas as pd
@@ -10,41 +10,37 @@ import pandas as pd
 app = FastAPI()
 
 
+@app.on_event("startup")
+async def startup_event():
+    global model, encoder, lb
+    model = joblib.load("./model/model.joblib")
+    encoder = joblib.load("./model/encoder.joblib")
+    lb = joblib.load("./model/lb.joblib")
+
+
+def hyphen_to_underscore(field_name):
+    return f"{field_name}".replace("_", "-")
+
+
 class Data(BaseModel):
-    age: int
-    workclass: str
-    fnlgt: int
-    education: str
-    education_num: int
-    marital_status: str
-    occupation: str
-    relationship: str
-    race: str
-    sex: str
-    capital_gain: float
-    capital_loss: float
-    hours_per_week: int
-    native_country: str
+    age: int = Field(..., example=45)
+    capital_gain: int = Field(..., example=2174)
+    capital_loss: int = Field(..., example=0)
+    education: str = Field(..., example="Bachelors")
+    education_num: int = Field(..., example=13)
+    fnlgt: int = Field(..., example=2334)
+    hours_per_week: int = Field(..., example=60)
+    marital_status: str = Field(..., example="Never-married")
+    native_country: str = Field(..., example="Cuba")
+    occupation: str = Field(..., example="Prof-specialty")
+    race: str = Field(..., example="Black")
+    relationship: str = Field(..., example="Wife")
+    sex: str = Field(..., example="Female")
+    workclass: str = Field(..., example="State-gov")
 
     class Config:
-        schema_extra = {
-            "example": {
-                "age": 24,
-                "workclass": "Private",
-                "fnlgt": 176580,
-                "education": "5th-6th",
-                "education-num": 3,
-                "marital-status": "Married-spouse-absent",
-                "occupation": "Farming-fishing",
-                "relationship": "Not-in-family",
-                "race": "White",
-                "sex": "Male",
-                "capital-gain": 0,
-                "capital-loss": 0,
-                "hours-per-week": 40,
-                "native-country": "Mexico",
-            }
-        }
+        alias_generator = hyphen_to_underscore
+        allow_population_by_field_name = True
 
 
 @app.get("/")
@@ -53,26 +49,7 @@ async def read_root():
 
 
 @app.post("/predict/")
-async def predict(data: Data
-                  # = Body(
-                  #     example={
-                  #         "age": 24,
-                  #         "workclass": "Private",
-                  #         "fnlgt": 176580,
-                  #         "education": "5th-6th",
-                  #         "education-num": 3,
-                  #         "marital-status": "Married-spouse-absent",
-                  #         "occupation": "Farming-fishing",
-                  #         "relationship": "Not-in-family",
-                  #         "race": "White",
-                  #         "sex": "Male",
-                  #         "capital-gain": 0,
-                  #         "capital-loss": 0,
-                  #         "hours-per-week": 40,
-                  #         "native-country": "Mexico",
-                  #     },
-                  # ),
-                  ):
+async def predict(data: Data):
     cat_features = [
         "workclass",
         "education",
@@ -83,9 +60,6 @@ async def predict(data: Data
         "sex",
         "native_country",
     ]
-    model = joblib.load("./model/model.joblib")
-    encoder = joblib.load("./model/encoder.joblib")
-    lb = joblib.load("./model/lb.joblib")
     data = dict(data)
     data = pd.DataFrame(data, index=[0])
 

@@ -12,10 +12,11 @@ This model should be used to predict the salary of US citizens based off a handf
 Data was obtained from: https://archive.ics.uci.edu/ml/datasets/census+income
 
 ## Evaluation Data
+20% of the data was used for evaluation. 
 
 ## Metrics
 The model was evaluated using F1 score. The value is 0.60.
-Additionally, per categorical category we obtained following interesting results:
+Additionally, per category we obtained following interesting results:
 Within "workclass" the model was performing well on "Without pay" and bad on "Self-employed".
 It had a high score on "education" for category "Preschool", but low on "9th".
 For "marital-status" the model did wel on "married" but not on "seperated".
