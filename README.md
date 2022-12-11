@@ -27,8 +27,7 @@ Code for an API that allows classifying a sample from the census dataset.
 * Information on the dataset can be found <a href="https://archive.ics.uci.edu/ml/datasets/census+income" target="_blank">here</a>.
 
 ## Model
-
-* Code contains a machine learning model that trains on the clean data and saves the model:
+* Code contains a [machine learning model](https://github.com/dmlc/xgboost/blob/master/doc/parameter.rst) that trains on the clean data and saves the model:
 ```bash
 > python starter/train_model.py
 ```

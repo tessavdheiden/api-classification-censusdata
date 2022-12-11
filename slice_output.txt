@@ -1,183 +1,179 @@
 workclass : 
-	Self-emp-not-inc : 
-		precision:0.80
-		recall:0.66
-		fbeta:0.72
 	Local-gov : 
-		precision:0.85
-		recall:0.79
-		fbeta:0.82
+		precision:0.90
+		recall:0.81
+		fbeta:0.85
 	Private : 
-		precision:0.81
+		precision:0.83
 		recall:0.70
-		fbeta:0.75
-	State-gov : 
-		precision:0.86
-		recall:0.89
-		fbeta:0.87
+		fbeta:0.76
+	Self-emp-not-inc : 
+		precision:0.82
+		recall:0.71
+		fbeta:0.76
 	Self-emp-inc : 
-		precision:0.88
+		precision:0.84
 		recall:0.87
-		fbeta:0.87
-	Never-worked : 
+		fbeta:0.85
+	State-gov : 
+		precision:0.85
+		recall:0.78
+		fbeta:0.81
+	Federal-gov : 
+		precision:0.85
+		recall:0.81
+		fbeta:0.83
+	Without-pay : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Federal-gov : 
-		precision:0.85
-		recall:0.86
-		fbeta:0.86
-	Without-pay : 
+	Never-worked : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
 education : 
 	Bachelors : 
-		precision:0.81
-		recall:0.85
-		fbeta:0.83
-	Assoc-voc : 
 		precision:0.83
-		recall:0.68
-		fbeta:0.75
-	Some-college : 
-		precision:0.79
-		recall:0.69
-		fbeta:0.74
-	Masters : 
-		precision:0.82
-		recall:0.91
+		recall:0.88
 		fbeta:0.86
-	5th-6th : 
-		precision:1.00
-		recall:0.40
-		fbeta:0.57
-	9th : 
-		precision:1.00
-		recall:0.00
-		fbeta:0.00
 	HS-grad : 
-		precision:0.83
-		recall:0.47
-		fbeta:0.60
-	Doctorate : 
-		precision:0.88
-		recall:1.00
-		fbeta:0.94
-	7th-8th : 
-		precision:0.67
-		recall:0.40
-		fbeta:0.50
-	Assoc-acdm : 
 		precision:0.84
-		recall:0.71
-		fbeta:0.77
-	Preschool : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Prof-school : 
-		precision:0.94
-		recall:0.96
-		fbeta:0.95
-	12th : 
-		precision:0.80
-		recall:0.44
-		fbeta:0.57
+		recall:0.45
+		fbeta:0.59
+	Masters : 
+		precision:0.88
+		recall:0.89
+		fbeta:0.88
+	Assoc-acdm : 
+		precision:0.87
+		recall:0.75
+		fbeta:0.80
 	11th : 
 		precision:1.00
-		recall:0.12
-		fbeta:0.22
+		recall:0.43
+		fbeta:0.60
+	Some-college : 
+		precision:0.78
+		recall:0.67
+		fbeta:0.72
+	7th-8th : 
+		precision:0.67
+		recall:0.22
+		fbeta:0.33
+	9th : 
+		precision:1.00
+		recall:0.20
+		fbeta:0.33
+	5th-6th : 
+		precision:1.00
+		recall:0.25
+		fbeta:0.40
+	Assoc-voc : 
+		precision:0.84
+		recall:0.68
+		fbeta:0.75
+	Doctorate : 
+		precision:0.86
+		recall:0.96
+		fbeta:0.91
+	Prof-school : 
+		precision:0.90
+		recall:0.96
+		fbeta:0.93
+	12th : 
+		precision:0.67
+		recall:0.50
+		fbeta:0.57
+	10th : 
+		precision:1.00
+		recall:0.33
+		fbeta:0.50
 	1st-4th : 
 		precision:1.00
 		recall:0.00
 		fbeta:0.00
-	10th : 
+	Preschool : 
 		precision:1.00
-		recall:0.47
-		fbeta:0.64
+		recall:1.00
+		fbeta:1.00
 marital-status : 
-	Married-civ-spouse : 
-		precision:0.82
-		recall:0.77
-		fbeta:0.79
 	Never-married : 
-		precision:0.96
-		recall:0.47
-		fbeta:0.63
+		precision:0.89
+		recall:0.52
+		fbeta:0.66
+	Married-civ-spouse : 
+		precision:0.83
+		recall:0.77
+		fbeta:0.80
 	Divorced : 
-		precision:0.88
-		recall:0.54
-		fbeta:0.67
-	Widowed : 
-		precision:1.00
-		recall:0.69
-		fbeta:0.82
+		precision:0.94
+		recall:0.48
+		fbeta:0.64
 	Separated : 
 		precision:1.00
 		recall:0.60
 		fbeta:0.75
+	Widowed : 
+		precision:0.83
+		recall:0.67
+		fbeta:0.74
 	Married-spouse-absent : 
-		precision:1.00
-		recall:0.33
-		fbeta:0.50
+		precision:0.80
+		recall:0.80
+		fbeta:0.80
 	Married-AF-spouse : 
 		precision:1.00
-		recall:1.00
-		fbeta:1.00
+		recall:0.50
+		fbeta:0.67
 occupation : 
-	Adm-clerical : 
-		precision:0.78
-		recall:0.62
-		fbeta:0.69
-	Craft-repair : 
-		precision:0.80
-		recall:0.49
-		fbeta:0.61
-	Sales : 
-		precision:0.83
-		recall:0.79
-		fbeta:0.81
-	Machine-op-inspct : 
-		precision:0.96
-		recall:0.39
-		fbeta:0.55
-	Exec-managerial : 
-		precision:0.82
-		recall:0.87
-		fbeta:0.84
-	Farming-fishing : 
-		precision:0.86
-		recall:0.30
-		fbeta:0.44
-	Transport-moving : 
-		precision:0.79
-		recall:0.37
-		fbeta:0.51
 	Prof-specialty : 
-		precision:0.85
-		recall:0.86
-		fbeta:0.86
-	Other-service : 
-		precision:1.00
-		recall:0.40
-		fbeta:0.57
-	Handlers-cleaners : 
-		precision:0.60
-		recall:0.19
-		fbeta:0.29
-	Tech-support : 
-		precision:0.73
-		recall:0.83
-		fbeta:0.78
-	? : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Protective-serv : 
-		precision:0.88
-		recall:0.80
+		precision:0.82
+		recall:0.85
 		fbeta:0.84
+	Exec-managerial : 
+		precision:0.84
+		recall:0.86
+		fbeta:0.85
+	Adm-clerical : 
+		precision:0.83
+		recall:0.64
+		fbeta:0.72
+	Farming-fishing : 
+		precision:0.70
+		recall:0.35
+		fbeta:0.47
+	Craft-repair : 
+		precision:0.82
+		recall:0.50
+		fbeta:0.62
+	Sales : 
+		precision:0.81
+		recall:0.74
+		fbeta:0.78
+	Protective-serv : 
+		precision:0.97
+		recall:0.85
+		fbeta:0.91
+	Other-service : 
+		precision:0.93
+		recall:0.44
+		fbeta:0.60
+	Handlers-cleaners : 
+		precision:1.00
+		recall:0.42
+		fbeta:0.59
+	Machine-op-inspct : 
+		precision:0.95
+		recall:0.38
+		fbeta:0.55
+	Transport-moving : 
+		precision:0.95
+		recall:0.35
+		fbeta:0.51
+	Tech-support : 
+		precision:0.89
+		recall:0.77
+		fbeta:0.83
 	Priv-house-serv : 
 		precision:1.00
 		recall:1.00
@@ -186,207 +182,191 @@ occupation :
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-relationship : 
-	Wife : 
-		precision:0.80
-		recall:0.84
-		fbeta:0.82
-	Husband : 
-		precision:0.82
-		recall:0.77
-		fbeta:0.79
-	Not-in-family : 
-		precision:0.91
-		recall:0.52
-		fbeta:0.66
-	Unmarried : 
+	? : 
 		precision:1.00
-		recall:0.44
-		fbeta:0.61
+		recall:1.00
+		fbeta:1.00
+relationship : 
 	Own-child : 
 		precision:1.00
-		recall:0.60
-		fbeta:0.75
+		recall:0.33
+		fbeta:0.50
+	Husband : 
+		precision:0.83
+		recall:0.77
+		fbeta:0.80
+	Not-in-family : 
+		precision:0.91
+		recall:0.57
+		fbeta:0.70
+	Wife : 
+		precision:0.84
+		recall:0.82
+		fbeta:0.83
+	Unmarried : 
+		precision:0.85
+		recall:0.42
+		fbeta:0.57
 	Other-relative : 
 		precision:1.00
-		recall:0.60
-		fbeta:0.75
+		recall:0.50
+		fbeta:0.67
 race : 
+	Amer-Indian-Eskimo : 
+		precision:1.00
+		recall:0.56
+		fbeta:0.71
 	White : 
-		precision:0.82
+		precision:0.84
 		recall:0.73
-		fbeta:0.77
+		fbeta:0.78
 	Black : 
 		precision:0.87
-		recall:0.81
-		fbeta:0.84
+		recall:0.68
+		fbeta:0.76
 	Asian-Pac-Islander : 
-		precision:0.87
-		recall:0.76
-		fbeta:0.81
-	Amer-Indian-Eskimo : 
-		precision:0.75
-		recall:0.43
-		fbeta:0.55
+		precision:0.85
+		recall:0.83
+		fbeta:0.84
 	Other : 
 		precision:1.00
-		recall:0.80
-		fbeta:0.89
+		recall:0.71
+		fbeta:0.83
 sex : 
-	Female : 
-		precision:0.83
-		recall:0.73
-		fbeta:0.78
 	Male : 
-		precision:0.83
+		precision:0.84
 		recall:0.74
 		fbeta:0.78
+	Female : 
+		precision:0.86
+		recall:0.70
+		fbeta:0.77
 native-country : 
 	United-States : 
-		precision:0.83
+		precision:0.84
 		recall:0.73
 		fbeta:0.78
-	Japan : 
-		precision:0.78
-		recall:0.78
-		fbeta:0.78
 	Mexico : 
-		precision:0.67
-		recall:0.50
-		fbeta:0.57
-	Vietnam : 
-		precision:0.50
-		recall:0.50
+		precision:1.00
+		recall:0.14
+		fbeta:0.25
+	France : 
+		precision:0.33
+		recall:1.00
 		fbeta:0.50
+	Trinadad&Tobago : 
+		precision:1.00
+		recall:1.00
+		fbeta:1.00
+	Canada : 
+		precision:1.00
+		recall:1.00
+		fbeta:1.00
 	El-Salvador : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Philippines : 
-		precision:0.86
-		recall:0.86
-		fbeta:0.86
-	Guatemala : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Laos : 
+	Dominican-Republic : 
 		precision:1.00
 		recall:0.00
 		fbeta:0.00
-	India : 
-		precision:0.91
-		recall:0.91
-		fbeta:0.91
-	Italy : 
-		precision:1.00
-		recall:0.67
-		fbeta:0.80
-	Nicaragua : 
+	Jamaica : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
 	Cuba : 
 		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Germany : 
-		precision:0.83
-		recall:1.00
-		fbeta:0.91
-	China : 
-		precision:0.67
-		recall:0.67
-		fbeta:0.67
-	Dominican-Republic : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Canada : 
-		precision:0.80
-		recall:0.80
-		fbeta:0.80
-	Ireland : 
-		precision:1.00
-		recall:0.00
-		fbeta:0.00
-	Poland : 
-		precision:0.50
-		recall:0.33
-		fbeta:0.40
+		recall:0.86
+		fbeta:0.92
 	Iran : 
 		precision:0.75
+		recall:0.75
+		fbeta:0.75
+	India : 
+		precision:0.90
 		recall:1.00
-		fbeta:0.86
+		fbeta:0.95
+	Germany : 
+		precision:0.86
+		recall:0.75
+		fbeta:0.80
+	Italy : 
+		precision:1.00
+		recall:0.67
+		fbeta:0.80
 	Hong : 
 		precision:1.00
-		recall:1.00
-		fbeta:1.00
+		recall:0.50
+		fbeta:0.67
+	Philippines : 
+		precision:0.82
+		recall:0.88
+		fbeta:0.85
+	China : 
+		precision:1.00
+		recall:0.60
+		fbeta:0.75
 	Puerto-Rico : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Taiwan : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	France : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Trinadad&Tobago : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Columbia : 
-		precision:1.00
-		recall:1.00
-		fbeta:1.00
-	Peru : 
-		precision:1.00
-		recall:0.00
-		fbeta:0.00
-	Hungary : 
+	Scotland : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
 	England : 
-		precision:0.57
-		recall:0.67
-		fbeta:0.62
-	Ecuador : 
-		precision:0.67
-		recall:1.00
-		fbeta:0.80
-	Jamaica : 
-		precision:0.25
-		recall:1.00
-		fbeta:0.40
-	South : 
-		precision:1.00
-		recall:0.50
-		fbeta:0.67
-	Portugal : 
+		precision:0.70
+		recall:0.78
+		fbeta:0.74
+	Guatemala : 
 		precision:1.00
 		recall:0.00
 		fbeta:0.00
-	Honduras : 
+	Yugoslavia : 
+		precision:0.67
+		recall:0.67
+		fbeta:0.67
+	Vietnam : 
+		precision:0.50
+		recall:1.00
+		fbeta:0.67
+	Poland : 
+		precision:0.50
+		recall:1.00
+		fbeta:0.67
+	Columbia : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Greece : 
+	Portugal : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Haiti : 
+	South : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
+	Japan : 
+		precision:0.67
+		recall:1.00
+		fbeta:0.80
+	Laos : 
+		precision:1.00
+		recall:0.00
+		fbeta:0.00
+	Ecuador : 
+		precision:1.00
+		recall:0.00
+		fbeta:0.00
 	Cambodia : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Thailand : 
+	Ireland : 
+		precision:1.00
+		recall:0.50
+		fbeta:0.67
+	Nicaragua : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
@@ -394,11 +374,31 @@ native-country :
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Holand-Netherlands : 
+	Peru : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
-	Scotland : 
+	Thailand : 
+		precision:1.00
+		recall:0.00
+		fbeta:0.00
+	Taiwan : 
+		precision:0.75
+		recall:1.00
+		fbeta:0.86
+	Greece : 
+		precision:1.00
+		recall:1.00
+		fbeta:1.00
+	Hungary : 
+		precision:1.00
+		recall:0.00
+		fbeta:0.00
+	Haiti : 
+		precision:1.00
+		recall:1.00
+		fbeta:1.00
+	Holand-Netherlands : 
 		precision:1.00
 		recall:1.00
 		fbeta:1.00
