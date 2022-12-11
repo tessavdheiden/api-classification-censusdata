@@ -5,9 +5,10 @@ import pickle
 
 import sklearn.preprocessing
 
-from starter.ml.model import train_model, compute_model_metrics, inference
+from starter.ml.model import train_model
 from starter.ml.data import process_data
 from sklearn.model_selection import train_test_split
+import xgboost
 
 
 @pytest.fixture
@@ -51,7 +52,4 @@ def test_train_model(data):
         train, ["categorical_feat"], label="id", training=True
     )
     model = train_model(X_train, y_train)
-    assert type(model) == sklearn.linear_model.LogisticRegression or \
-           type(model) == sklearn.ensemble.RandomForestClassifier or \
-           type(model) == sklearn.svm.SVC or \
-           type(model) == sklearn.neighbors.KNeighborsClassifier
+    assert type(model) == xgboost.sklearn.XGBClassifier

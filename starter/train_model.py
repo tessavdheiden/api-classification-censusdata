@@ -1,5 +1,5 @@
 # Script to train machine learning model.
-
+from ml.model import compute_model_metrics
 from sklearn.model_selection import train_test_split
 
 # Add the necessary imports for the starter code.
@@ -38,6 +38,9 @@ X_test, y_test, _, _ = process_data(
 
 # Train and save a model.
 model = train_model(X_train=X_train, y_train=y_train)
+_, _, fscore = compute_model_metrics(y_test, model.predict(X_test))
+print(f"F-score: {fscore}")
+
 dump(model, './model/model.joblib')
 dump(lb, './model/lb.joblib')
 dump(encoder, './model/encoder.joblib')

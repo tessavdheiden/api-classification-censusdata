@@ -98,5 +98,5 @@ def test_post_input_result_low():
         )
         assert response.status_code == 200
         assert response.json() == {
-            "salary": ">50k"
+            "salary": "<=50k"
         }
